@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var selectedTab = "home"
+    @State private var repoInfo = ""
     
     var body: some View {
             TabView(selection: $selectedTab) {
@@ -19,13 +20,13 @@ struct ContentView: View {
                         Text("Home")
                     }
                     .tag("home")
-                RepositoriesVC()
+                RepositoriesVC(repoInfo: $repoInfo)
                     .tabItem {
                         Image("search-normal")
                         Text("Repositories")
                     }
                     .tag("repo")
-                UsersVC()
+                UsersVC(repoInfo: $repoInfo)
                     .tabItem {
                         Image("user")
                         Text("Users")
