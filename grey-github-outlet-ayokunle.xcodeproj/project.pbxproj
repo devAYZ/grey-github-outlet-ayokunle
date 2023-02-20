@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0460E67029A387AF00BEC56F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E66F29A387AF00BEC56F /* HomeVC.swift */; };
+		0460E67329A3889300BEC56F /* RepositoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67229A3889300BEC56F /* RepositoriesVC.swift */; };
+		0460E67629A388BF00BEC56F /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67529A388BF00BEC56F /* UsersVC.swift */; };
 		04FFB7B629A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB7B529A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift */; };
 		04FFB7B829A3836200AF6E6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB7B729A3836200AF6E6D /* ContentView.swift */; };
 		04FFB7BA29A3836400AF6E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB7B929A3836400AF6E6D /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0460E66F29A387AF00BEC56F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		0460E67229A3889300BEC56F /* RepositoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesVC.swift; sourceTree = "<group>"; };
+		0460E67529A388BF00BEC56F /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		04FFB7B229A3836200AF6E6D /* grey-github-outlet-ayokunle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grey-github-outlet-ayokunle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FFB7B529A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grey_github_outlet_ayokunleApp.swift; sourceTree = "<group>"; };
 		04FFB7B729A3836200AF6E6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +77,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0460E66E29A3878500BEC56F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0460E66F29A387AF00BEC56F /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0460E67129A3887900BEC56F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0460E67229A3889300BEC56F /* RepositoriesVC.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0460E67429A388B200BEC56F /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				0460E67529A388BF00BEC56F /* UsersVC.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
 		04FFB7A929A3836100AF6E6D = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +124,9 @@
 		04FFB7B429A3836200AF6E6D /* grey-github-outlet-ayokunle */ = {
 			isa = PBXGroup;
 			children = (
+				0460E67429A388B200BEC56F /* Users */,
+				0460E67129A3887900BEC56F /* Repositories */,
+				0460E66E29A3878500BEC56F /* Home */,
 				04FFB7B529A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift */,
 				04FFB7B729A3836200AF6E6D /* ContentView.swift */,
 				04FFB7B929A3836400AF6E6D /* Assets.xcassets */,
@@ -257,6 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0460E67629A388BF00BEC56F /* UsersVC.swift in Sources */,
+				0460E67329A3889300BEC56F /* RepositoriesVC.swift in Sources */,
+				0460E67029A387AF00BEC56F /* HomeVC.swift in Sources */,
 				04FFB7B829A3836200AF6E6D /* ContentView.swift in Sources */,
 				04FFB7B629A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift in Sources */,
 			);

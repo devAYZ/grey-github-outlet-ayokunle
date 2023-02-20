@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var selectedTab = "home"
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+            TabView(selection: $selectedTab) {
+                HomeVC(selectedTab: $selectedTab) // Veiw 1
+                    .tabItem {
+                        Image("home")
+                        Text("Home")
+                    }
+                    .tag("home")
+                RepositoriesVC()
+                    .tabItem {
+                        Image("search-normal")
+                        Text("Repositories")
+                    }
+                    .tag("repo")
+                UsersVC()
+                    .tabItem {
+                        Image("user")
+                        Text("Users")
+                    }
+                    .tag("users")
+            }
+            .accentColor(.black)
+            .onAppear {
+                UITabBar.appearance().backgroundColor = .white // default is white though
+            }
     }
 }
 
