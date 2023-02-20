@@ -40,6 +40,14 @@
 		0460E66F29A387AF00BEC56F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0460E67229A3889300BEC56F /* RepositoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesVC.swift; sourceTree = "<group>"; };
 		0460E67529A388BF00BEC56F /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
+		0460E67929A3DF3700BEC56F /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
+		0460E67A29A3DF3800BEC56F /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
+		0460E67B29A3DF3800BEC56F /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
+		0460E67C29A3DF3800BEC56F /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
+		0460E67D29A3DF3800BEC56F /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
+		0460E67E29A3DF3900BEC56F /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
+		0460E67F29A3DF3900BEC56F /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		0460E68029A3DF6A00BEC56F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		04FFB7B229A3836200AF6E6D /* grey-github-outlet-ayokunle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grey-github-outlet-ayokunle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FFB7B529A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grey_github_outlet_ayokunleApp.swift; sourceTree = "<group>"; };
 		04FFB7B729A3836200AF6E6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +109,28 @@
 			path = Users;
 			sourceTree = "<group>";
 		};
+		0460E67729A3DE0E00BEC56F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0460E67829A3DE1500BEC56F /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0460E67829A3DE1500BEC56F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				0460E67A29A3DF3800BEC56F /* Manrope-Bold.ttf */,
+				0460E67929A3DF3700BEC56F /* Manrope-ExtraBold.ttf */,
+				0460E67C29A3DF3800BEC56F /* Manrope-ExtraLight.ttf */,
+				0460E67B29A3DF3800BEC56F /* Manrope-Light.ttf */,
+				0460E67E29A3DF3900BEC56F /* Manrope-Medium.ttf */,
+				0460E67D29A3DF3800BEC56F /* Manrope-Regular.ttf */,
+				0460E67F29A3DF3900BEC56F /* Manrope-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		04FFB7A929A3836100AF6E6D = {
 			isa = PBXGroup;
 			children = (
@@ -124,9 +154,11 @@
 		04FFB7B429A3836200AF6E6D /* grey-github-outlet-ayokunle */ = {
 			isa = PBXGroup;
 			children = (
+				0460E68029A3DF6A00BEC56F /* Info.plist */,
 				0460E67429A388B200BEC56F /* Users */,
 				0460E67129A3887900BEC56F /* Repositories */,
 				0460E66E29A3878500BEC56F /* Home */,
+				0460E67729A3DE0E00BEC56F /* Resources */,
 				04FFB7B529A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift */,
 				04FFB7B729A3836200AF6E6D /* ContentView.swift */,
 				04FFB7B929A3836400AF6E6D /* Assets.xcassets */,
@@ -456,6 +488,7 @@
 				DEVELOPMENT_TEAM = LWU8V4B258;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "grey-github-outlet-ayokunle/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -485,6 +518,7 @@
 				DEVELOPMENT_TEAM = LWU8V4B258;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "grey-github-outlet-ayokunle/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
