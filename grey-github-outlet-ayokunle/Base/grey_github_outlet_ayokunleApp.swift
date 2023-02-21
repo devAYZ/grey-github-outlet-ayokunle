@@ -11,7 +11,7 @@ import SwiftUI
 struct grey_github_outlet_ayokunleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
