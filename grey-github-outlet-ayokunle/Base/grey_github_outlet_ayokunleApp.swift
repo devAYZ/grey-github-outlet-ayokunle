@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct grey_github_outlet_ayokunleApp: App {
+    
+    init() {
+//        UINavigationBar.appearance().fo
+    }
+    
     var body: some Scene {
         WindowGroup {
             RootView()

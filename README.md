@@ -24,8 +24,8 @@ The goal is to build an app (using swiftUI) for searching Github repositories an
 ## Dependency Manager
 - Swift Package Dependencies
 
-## Framework
-- 
+## Dependency
+- Alamofire: this handle all api/network request/call
 
 ## Links
 - Figma Design [Figma Link](https://www.figma.com/file/JzhqYEnWurXs3peqPJL6UG/Android-Developer-Interview-Live-Test?node-id=1%3A389&t=4ckFbC4WWw0eylIJ-0)
