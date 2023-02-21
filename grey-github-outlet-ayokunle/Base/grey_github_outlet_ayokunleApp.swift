@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct grey_github_outlet_ayokunleApp: App {
     
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     init() {
-//        UINavigationBar.appearance().fo
+        //UINavigationBar.appearance().fo
     }
     
     var body: some Scene {

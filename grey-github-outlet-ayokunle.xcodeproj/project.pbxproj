@@ -10,6 +10,7 @@
 		0441CCCA29A466CC00C68CEE /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441CCC929A466CC00C68CEE /* HomeModel.swift */; };
 		0441CCCC29A466D500C68CEE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441CCCB29A466D500C68CEE /* HomeViewModel.swift */; };
 		0441CCCF29A47BE700C68CEE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0441CCCE29A47BE700C68CEE /* Alamofire */; };
+		0441CCD129A5372600C68CEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441CCD029A5372600C68CEE /* AppDelegate.swift */; };
 		0460E67029A387AF00BEC56F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E66F29A387AF00BEC56F /* HomeView.swift */; };
 		0460E67329A3889300BEC56F /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67229A3889300BEC56F /* RepositoriesView.swift */; };
 		0460E67629A388BF00BEC56F /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67529A388BF00BEC56F /* UsersView.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		0441CCC929A466CC00C68CEE /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		0441CCCB29A466D500C68CEE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0441CCD029A5372600C68CEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0460E66F29A387AF00BEC56F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0460E67229A3889300BEC56F /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
 		0460E67529A388BF00BEC56F /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				04FFB7B529A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift */,
+				0441CCD029A5372600C68CEE /* AppDelegate.swift */,
 				04FFB7B729A3836200AF6E6D /* RootView.swift */,
 			);
 			path = Base;
@@ -384,6 +387,7 @@
 				0460E67629A388BF00BEC56F /* UsersView.swift in Sources */,
 				0460E67329A3889300BEC56F /* RepositoriesView.swift in Sources */,
 				0460E67029A387AF00BEC56F /* HomeView.swift in Sources */,
+				0441CCD129A5372600C68CEE /* AppDelegate.swift in Sources */,
 				0441CCCC29A466D500C68CEE /* HomeViewModel.swift in Sources */,
 				0441CCCA29A466CC00C68CEE /* HomeModel.swift in Sources */,
 				04FFB7B829A3836200AF6E6D /* RootView.swift in Sources */,
@@ -557,6 +561,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -589,6 +594,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
