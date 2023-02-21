@@ -10,6 +10,14 @@
 		0460E67029A387AF00BEC56F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E66F29A387AF00BEC56F /* HomeVC.swift */; };
 		0460E67329A3889300BEC56F /* RepositoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67229A3889300BEC56F /* RepositoriesVC.swift */; };
 		0460E67629A388BF00BEC56F /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67529A388BF00BEC56F /* UsersVC.swift */; };
+		04D8858929A4471F0066C3FE /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67A29A3DF3800BEC56F /* Manrope-Bold.ttf */; };
+		04D8858A29A4471F0066C3FE /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67929A3DF3700BEC56F /* Manrope-ExtraBold.ttf */; };
+		04D8858B29A4471F0066C3FE /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67D29A3DF3800BEC56F /* Manrope-Regular.ttf */; };
+		04D8858C29A4471F0066C3FE /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67C29A3DF3800BEC56F /* Manrope-ExtraLight.ttf */; };
+		04D8858D29A4471F0066C3FE /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67B29A3DF3800BEC56F /* Manrope-Light.ttf */; };
+		04D8858E29A4471F0066C3FE /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67F29A3DF3900BEC56F /* Manrope-SemiBold.ttf */; };
+		04D8858F29A4471F0066C3FE /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67E29A3DF3900BEC56F /* Manrope-Medium.ttf */; };
+		04D8859229A44A7A0066C3FE /* ManropeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8859129A44A7A0066C3FE /* ManropeFont.swift */; };
 		04FFB7B629A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB7B529A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift */; };
 		04FFB7B829A3836200AF6E6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB7B729A3836200AF6E6D /* ContentView.swift */; };
 		04FFB7BA29A3836400AF6E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB7B929A3836400AF6E6D /* Assets.xcassets */; };
@@ -48,6 +56,7 @@
 		0460E67E29A3DF3900BEC56F /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
 		0460E67F29A3DF3900BEC56F /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
 		0460E68029A3DF6A00BEC56F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		04D8859129A44A7A0066C3FE /* ManropeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManropeFont.swift; sourceTree = "<group>"; };
 		04FFB7B229A3836200AF6E6D /* grey-github-outlet-ayokunle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grey-github-outlet-ayokunle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FFB7B529A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grey_github_outlet_ayokunleApp.swift; sourceTree = "<group>"; };
 		04FFB7B729A3836200AF6E6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -131,6 +140,24 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		04D8859029A44A310066C3FE /* Modifiers + Ext */ = {
+			isa = PBXGroup;
+			children = (
+				04D8859129A44A7A0066C3FE /* ManropeFont.swift */,
+			);
+			path = "Modifiers + Ext";
+			sourceTree = "<group>";
+		};
+		04D8859329A450B30066C3FE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0460E67429A388B200BEC56F /* Users */,
+				0460E67129A3887900BEC56F /* Repositories */,
+				0460E66E29A3878500BEC56F /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		04FFB7A929A3836100AF6E6D = {
 			isa = PBXGroup;
 			children = (
@@ -155,9 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				0460E68029A3DF6A00BEC56F /* Info.plist */,
-				0460E67429A388B200BEC56F /* Users */,
-				0460E67129A3887900BEC56F /* Repositories */,
-				0460E66E29A3878500BEC56F /* Home */,
+				04D8859329A450B30066C3FE /* Scenes */,
+				04D8859029A44A310066C3FE /* Modifiers + Ext */,
 				0460E67729A3DE0E00BEC56F /* Resources */,
 				04FFB7B529A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift */,
 				04FFB7B729A3836200AF6E6D /* ContentView.swift */,
@@ -297,6 +323,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FFB7BD29A3836400AF6E6D /* Preview Assets.xcassets in Resources */,
+				04D8858C29A4471F0066C3FE /* Manrope-ExtraLight.ttf in Resources */,
+				04D8858D29A4471F0066C3FE /* Manrope-Light.ttf in Resources */,
+				04D8858B29A4471F0066C3FE /* Manrope-Regular.ttf in Resources */,
+				04D8858A29A4471F0066C3FE /* Manrope-ExtraBold.ttf in Resources */,
+				04D8858929A4471F0066C3FE /* Manrope-Bold.ttf in Resources */,
+				04D8858F29A4471F0066C3FE /* Manrope-Medium.ttf in Resources */,
+				04D8858E29A4471F0066C3FE /* Manrope-SemiBold.ttf in Resources */,
 				04FFB7BA29A3836400AF6E6D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +360,7 @@
 				0460E67029A387AF00BEC56F /* HomeVC.swift in Sources */,
 				04FFB7B829A3836200AF6E6D /* ContentView.swift in Sources */,
 				04FFB7B629A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift in Sources */,
+				04D8859229A44A7A0066C3FE /* ManropeFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

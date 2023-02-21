@@ -42,7 +42,8 @@ struct HomeVC: View {
             .toolbar {
                 ToolbarItem(placement: .navigation) {
                     VStack {
-                        Text("Home").font(.title).fontWeight(.bold)
+                        Text("Home")//.font(.title).fontWeight(.bold)
+                            .modifier(ManropeFont(fName: .bold, size: 20))
                     }
                 }
             }
@@ -63,6 +64,7 @@ struct UserCell: View {
                 Image("user")
                     .frame(width: 20, height: 20)
                 Text("Users").fontWeight(.bold)
+                    .modifier(ManropeFont(fName: .regular, size: 16))
             }
             .padding()
         }
@@ -88,6 +90,7 @@ struct RepoCell: View {
                     .frame(width: 20, height: 20)
                     .cornerRadius(2)
                 Text("Repositories").fontWeight(.bold)
+                    .modifier(ManropeFont(fName: .regular, size: 16))
             }
             .padding()
         }

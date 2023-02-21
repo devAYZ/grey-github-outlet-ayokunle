@@ -38,6 +38,30 @@ struct ContentView: View {
                 UITabBar.appearance().backgroundColor = .white // default is white though
             }
     }
+    
+    /*
+    init() {
+        for family in UIFont.familyNames {
+            
+             print(family)
+            
+             for names in UIFont.fontNames(forFamilyName: family) {
+             
+                 print("== \(names)")
+             }
+        }
+    }
+    
+    Manrope
+    == Manrope-Regular
+    == Manrope-ExtraLight
+    == Manrope-Light
+    == Manrope-Medium
+    == Manrope-SemiBold
+    == Manrope-Bold
+    == Manrope-ExtraBold
+     */
+
 }
 
 struct ContentView_Previews: PreviewProvider {

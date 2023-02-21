@@ -1,5 +1,5 @@
 //
-//  RepositoriesVC.swift
+//  UsersVC.swift
 //  grey-github-outlet-ayokunle
 //
 //  Created by Ayokunle Pro on 2/20/23.
@@ -8,14 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct RepositoriesVC: View {
+struct UsersVC: View {
     
-    static let emptyText = "Search Github for repositories, issues and pull requests!"
+    static let emptyText = "Search Github for users..."
     @Binding var repoInfo: String
     
     var body: some View {
         NavigationView {
             ZStack {
+                
                 HStack(spacing: 0) {
                     searchBar
                         .frame(maxWidth: .infinity)
@@ -28,6 +29,7 @@ struct RepositoriesVC: View {
                     .background(.black)
                     .cornerRadius(4)
                     .frame(maxWidth: .infinity)
+                    .modifier(ManropeFont(fName: .extrabold, size: 12))
                 }
                 .frame(minWidth: 0,
                        maxWidth: .infinity,
@@ -37,19 +39,20 @@ struct RepositoriesVC: View {
                 .clipped()
                 .padding()
                 
-                
                 VStack(spacing: 20) {
                     Image("search-large")
-                    Text(RepositoriesVC.emptyText)
+                    Text(UsersVC.emptyText)
                         .multilineTextAlignment(.center)
                         .fontWeight(.light)
+                        .modifier(ManropeFont(fName: .medium, size: 12))
 
                 }
             }
             .toolbar {
                 ToolbarItem(placement: .navigation) {
                     VStack {
-                        Text("Repositories").font(.title).fontWeight(.bold)
+                        Text("Users")
+                            .modifier(ManropeFont(fName: .bold, size: 20))
                     }
                 }
             }
@@ -59,9 +62,8 @@ struct RepositoriesVC: View {
     var searchBar: some View {
         HStack {
             Image("search-small")
-            TextField("Search for repositories...", text: $repoInfo) //Search for repositories... users
-                .fontWeight(.light)
-                .font(.caption)
+            TextField("Search for users...", text: $repoInfo)
+                .modifier(ManropeFont(fName: .regular, size: 10))
         }
         .padding(10)
         .background(Color.white)
