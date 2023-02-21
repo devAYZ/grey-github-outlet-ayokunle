@@ -22,7 +22,7 @@ The goal is to build an app (using swiftUI) for searching Github repositories an
 - MVVM
 
 ## Dependency Manager
-- Cocoapod
+- Swift Package Dependencies
 
 ## Framework
 - 

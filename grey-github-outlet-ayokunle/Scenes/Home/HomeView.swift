@@ -8,33 +8,35 @@
 import Foundation
 import SwiftUI
 
+// MARK: Home View
 struct HomeView: View {
     
     @State private var gridLayout: [GridItem] = [GridItem(.flexible())]
     @Binding var selectedTab: String
-    var viewModel = HomeViewModel()
+    @ObservedObject var viewModel = HomeViewModel()
     
     var body: some View {
         NavigationView {
-            ZStack(alignment: .top) {
-                VStack {
-                    LazyHGrid(rows: gridLayout, alignment: .top, spacing: 10) {
-                        UserCell(selectedTab: $selectedTab)
-                        RepoCell(selectedTab: $selectedTab)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .topLeading)
-                    .padding()
-                }
-            }
-//            VStack {
-//                HStack(spacing: 15) {
-//                    UserCell(selectedTab: $selectedTab)
-//                    RepoCell(selectedTab: $selectedTab)
+//            ZStack(alignment: .top) {
+//                VStack {
+//                    LazyHGrid(rows: gridLayout, alignment: .top, spacing: 10) {
+//                        UserCell(selectedTab: $selectedTab)
+//                        RepoCell(selectedTab: $selectedTab)
+//                    }
+//                    .frame(maxWidth: .infinity, alignment: .topLeading)
+//                    .padding()
 //                }
-//                .frame(maxWidth: .infinity, alignment: .topLeading)
-//                .padding()
-//                Spacer()
 //            }
+            VStack {
+                HStack(spacing: 15) {
+                    UserCell(selectedTab: $selectedTab)
+                    RepoCell(selectedTab: $selectedTab)
+                }
+                .frame(maxWidth: .infinity, alignment: .topLeading)
+                .padding()
+                Spacer()
+            }
+            .offset(y: -55)
             .navigationBarTitleDisplayMode(.automatic)
             .toolbar {
                 ToolbarItem(placement: .navigation) {
@@ -48,6 +50,7 @@ struct HomeView: View {
     }
 }
 
+// MARK: User Clickable View
 struct UserCell: View {
     
     @Binding var selectedTab: String
@@ -72,6 +75,7 @@ struct UserCell: View {
     
 }
 
+// MARK: Repositories Clickable View
 struct RepoCell: View {
     
     @Binding var selectedTab: String

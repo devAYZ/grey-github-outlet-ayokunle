@@ -9,6 +9,6 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
     
-    var constantViewModel = ConstantModel()
+    @Published var constantViewModel = ConstantModel()
     
 }

@@ -57,6 +57,7 @@ struct UsersView: View {
                 }
             }
         }
+        .accentColor(Color(.label)) // Navigation back color
     }
     
     var searchBar: some View {
