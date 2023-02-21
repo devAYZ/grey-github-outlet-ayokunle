@@ -1,5 +1,5 @@
 //
-//  HomeVC.swift
+//  HomeView.swift
 //  grey-github-outlet-ayokunle
 //
 //  Created by Ayokunle Pro on 2/20/23.
@@ -8,10 +8,11 @@
 import Foundation
 import SwiftUI
 
-struct HomeVC: View {
+struct HomeView: View {
     
     @State private var gridLayout: [GridItem] = [GridItem(.flexible())]
     @Binding var selectedTab: String
+    var viewModel = HomeViewModel()
     
     var body: some View {
         NavigationView {
@@ -38,7 +39,7 @@ struct HomeVC: View {
             .toolbar {
                 ToolbarItem(placement: .navigation) {
                     VStack {
-                        Text("Home")
+                        Text(viewModel.constantViewModel.home)
                             .modifier(ManropeFont(fName: .bold, size: 20))
                     }
                 }
@@ -49,8 +50,8 @@ struct HomeVC: View {
 
 struct UserCell: View {
     
-    static let tag = "users"
     @Binding var selectedTab: String
+    var viewModel = HomeViewModel()
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -58,14 +59,14 @@ struct UserCell: View {
             VStack(alignment: .leading, spacing: 30) {
                 Image("user")
                     .frame(width: 20, height: 20)
-                Text("Users").fontWeight(.bold)
+                Text(viewModel.constantViewModel.users).fontWeight(.bold)
                     .modifier(ManropeFont(fName: .regular, size: 16))
             }
             .padding()
         }
         .frame(width: 156, height: 118)
         .onTapGesture {
-            selectedTab = UserCell.tag
+            selectedTab = viewModel.constantViewModel.usersTag
         }
     }
     
@@ -73,8 +74,8 @@ struct UserCell: View {
 
 struct RepoCell: View {
     
-    static let tag = "repo"
     @Binding var selectedTab: String
+    var viewModel = HomeViewModel()
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -84,14 +85,14 @@ struct RepoCell: View {
                     .foregroundColor(Color.white)
                     .frame(width: 20, height: 20)
                     .cornerRadius(2)
-                Text("Repositories").fontWeight(.bold)
+                Text(viewModel.constantViewModel.repositories).fontWeight(.bold)
                     .modifier(ManropeFont(fName: .regular, size: 16))
             }
             .padding()
         }
         .frame(width: 156, height: 118)
         .onTapGesture {
-            selectedTab = RepoCell.tag
+            selectedTab = viewModel.constantViewModel.repoTag
         }
         
     }

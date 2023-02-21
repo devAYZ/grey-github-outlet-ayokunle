@@ -1,5 +1,5 @@
 //
-//  RepositoriesVC.swift
+//  UsersView.swift
 //  grey-github-outlet-ayokunle
 //
 //  Created by Ayokunle Pro on 2/20/23.
@@ -8,14 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct RepositoriesVC: View {
+struct UsersView: View {
     
-    static let emptyText = "Search Github for repositories, issues and pull requests!"
+    static let emptyText = "Search Github for users..."
     @Binding var repoInfo: String
     
     var body: some View {
         NavigationView {
             ZStack {
+                
                 HStack(spacing: 0) {
                     searchBar
                         .frame(maxWidth: .infinity)
@@ -38,10 +39,9 @@ struct RepositoriesVC: View {
                 .clipped()
                 .padding()
                 
-                
                 VStack(spacing: 20) {
                     Image("search-large")
-                    Text(RepositoriesVC.emptyText)
+                    Text(UsersView.emptyText)
                         .multilineTextAlignment(.center)
                         .fontWeight(.light)
                         .modifier(ManropeFont(fName: .medium, size: 12))
@@ -51,7 +51,7 @@ struct RepositoriesVC: View {
             .toolbar {
                 ToolbarItem(placement: .navigation) {
                     VStack {
-                        Text("Repositories")
+                        Text("Users")
                             .modifier(ManropeFont(fName: .bold, size: 20))
                     }
                 }
@@ -62,7 +62,7 @@ struct RepositoriesVC: View {
     var searchBar: some View {
         HStack {
             Image("search-small")
-            TextField("Search for repositories...", text: $repoInfo)
+            TextField("Search for users...", text: $repoInfo)
                 .modifier(ManropeFont(fName: .regular, size: 10))
         }
         .padding(10)

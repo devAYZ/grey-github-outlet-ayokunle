@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0460E67029A387AF00BEC56F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E66F29A387AF00BEC56F /* HomeVC.swift */; };
-		0460E67329A3889300BEC56F /* RepositoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67229A3889300BEC56F /* RepositoriesVC.swift */; };
-		0460E67629A388BF00BEC56F /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67529A388BF00BEC56F /* UsersVC.swift */; };
+		0441CCCA29A466CC00C68CEE /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441CCC929A466CC00C68CEE /* HomeModel.swift */; };
+		0441CCCC29A466D500C68CEE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441CCCB29A466D500C68CEE /* HomeViewModel.swift */; };
+		0460E67029A387AF00BEC56F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E66F29A387AF00BEC56F /* HomeView.swift */; };
+		0460E67329A3889300BEC56F /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67229A3889300BEC56F /* RepositoriesView.swift */; };
+		0460E67629A388BF00BEC56F /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67529A388BF00BEC56F /* UsersView.swift */; };
 		04D8858929A4471F0066C3FE /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67A29A3DF3800BEC56F /* Manrope-Bold.ttf */; };
 		04D8858A29A4471F0066C3FE /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67929A3DF3700BEC56F /* Manrope-ExtraBold.ttf */; };
 		04D8858B29A4471F0066C3FE /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67D29A3DF3800BEC56F /* Manrope-Regular.ttf */; };
@@ -46,9 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0460E66F29A387AF00BEC56F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		0460E67229A3889300BEC56F /* RepositoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesVC.swift; sourceTree = "<group>"; };
-		0460E67529A388BF00BEC56F /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
+		0441CCC929A466CC00C68CEE /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		0441CCCB29A466D500C68CEE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0460E66F29A387AF00BEC56F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0460E67229A3889300BEC56F /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
+		0460E67529A388BF00BEC56F /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		0460E67929A3DF3700BEC56F /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
 		0460E67A29A3DF3800BEC56F /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
 		0460E67B29A3DF3800BEC56F /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
@@ -108,7 +112,9 @@
 		0460E66E29A3878500BEC56F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0460E66F29A387AF00BEC56F /* HomeVC.swift */,
+				0460E66F29A387AF00BEC56F /* HomeView.swift */,
+				0441CCCB29A466D500C68CEE /* HomeViewModel.swift */,
+				0441CCC929A466CC00C68CEE /* HomeModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -116,7 +122,7 @@
 		0460E67129A3887900BEC56F /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				0460E67229A3889300BEC56F /* RepositoriesVC.swift */,
+				0460E67229A3889300BEC56F /* RepositoriesView.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -124,7 +130,7 @@
 		0460E67429A388B200BEC56F /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				0460E67529A388BF00BEC56F /* UsersVC.swift */,
+				0460E67529A388BF00BEC56F /* UsersView.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -367,9 +373,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0460E67629A388BF00BEC56F /* UsersVC.swift in Sources */,
-				0460E67329A3889300BEC56F /* RepositoriesVC.swift in Sources */,
-				0460E67029A387AF00BEC56F /* HomeVC.swift in Sources */,
+				0460E67629A388BF00BEC56F /* UsersView.swift in Sources */,
+				0460E67329A3889300BEC56F /* RepositoriesView.swift in Sources */,
+				0460E67029A387AF00BEC56F /* HomeView.swift in Sources */,
+				0441CCCC29A466D500C68CEE /* HomeViewModel.swift in Sources */,
+				0441CCCA29A466CC00C68CEE /* HomeModel.swift in Sources */,
 				04FFB7B829A3836200AF6E6D /* RootView.swift in Sources */,
 				04FFB7B629A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift in Sources */,
 				04D8859229A44A7A0066C3FE /* ManropeFont.swift in Sources */,

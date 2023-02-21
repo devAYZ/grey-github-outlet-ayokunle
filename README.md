@@ -18,7 +18,10 @@ The goal is to build an app (using swiftUI) for searching Github repositories an
 ## Branches
 - master
 
-## Dependency Manager!
+## Architecture
+- MVVM
+
+## Dependency Manager
 - Cocoapod
 
 ## Framework
