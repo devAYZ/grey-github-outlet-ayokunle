@@ -62,7 +62,7 @@ struct RepositoriesVC: View {
     var searchBar: some View {
         HStack {
             Image("search-small")
-            TextField("Search for repositories...", text: $repoInfo) //Search for repositories... users
+            TextField("Search for repositories...", text: $repoInfo)
                 .modifier(ManropeFont(fName: .regular, size: 10))
         }
         .padding(10)

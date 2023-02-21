@@ -11,43 +11,38 @@ import SwiftUI
 struct HomeVC: View {
     
     @State private var gridLayout: [GridItem] = [GridItem(.flexible())]
-    //@State private var gridColumn: Int = 2
-    
     @Binding var selectedTab: String
     
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                //Color.blue
-                //Color.red.ignoresSafeArea(edges: .top)
                 VStack {
                     LazyHGrid(rows: gridLayout, alignment: .top, spacing: 10) {
-//                        NavigationLink(destination: UsersVC()) {
-//                            UserCell()
-//                            NotificationCenter.default.post(name: Notification.Name("Tab.switch"), object: nil, userInfo: ["location": 2])
-//                        }
                         UserCell(selectedTab: $selectedTab)
                         RepoCell(selectedTab: $selectedTab)
                     }
-                    .frame(minWidth: 0,
-                           maxWidth: .infinity,
-                           minHeight: 0,
-                           maxHeight: .infinity,
-                           alignment: .topLeading)
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
+                    .padding()
                 }
-                //.border(.red)
             }
-            //.navigationTitle("Home").font(.footnote)
+//            VStack {
+//                HStack(spacing: 15) {
+//                    UserCell(selectedTab: $selectedTab)
+//                    RepoCell(selectedTab: $selectedTab)
+//                }
+//                .frame(maxWidth: .infinity, alignment: .topLeading)
+//                .padding()
+//                Spacer()
+//            }
             .navigationBarTitleDisplayMode(.automatic)
             .toolbar {
                 ToolbarItem(placement: .navigation) {
                     VStack {
-                        Text("Home")//.font(.title).fontWeight(.bold)
+                        Text("Home")
                             .modifier(ManropeFont(fName: .bold, size: 20))
                     }
                 }
             }
-            //.statusBarHidden()
         }
     }
 }
