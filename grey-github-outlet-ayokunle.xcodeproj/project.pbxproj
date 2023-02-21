@@ -18,6 +18,7 @@
 		04D8858E29A4471F0066C3FE /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67F29A3DF3900BEC56F /* Manrope-SemiBold.ttf */; };
 		04D8858F29A4471F0066C3FE /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67E29A3DF3900BEC56F /* Manrope-Medium.ttf */; };
 		04D8859229A44A7A0066C3FE /* ManropeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8859129A44A7A0066C3FE /* ManropeFont.swift */; };
+		04D8859529A4525F0066C3FE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D8859429A4525F0066C3FE /* Launch Screen.storyboard */; };
 		04FFB7B629A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB7B529A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift */; };
 		04FFB7B829A3836200AF6E6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB7B729A3836200AF6E6D /* ContentView.swift */; };
 		04FFB7BA29A3836400AF6E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB7B929A3836400AF6E6D /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		0460E67F29A3DF3900BEC56F /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
 		0460E68029A3DF6A00BEC56F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		04D8859129A44A7A0066C3FE /* ManropeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManropeFont.swift; sourceTree = "<group>"; };
+		04D8859429A4525F0066C3FE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		04FFB7B229A3836200AF6E6D /* grey-github-outlet-ayokunle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grey-github-outlet-ayokunle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FFB7B529A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grey_github_outlet_ayokunleApp.swift; sourceTree = "<group>"; };
 		04FFB7B729A3836200AF6E6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				04FFB7B729A3836200AF6E6D /* ContentView.swift */,
 				04FFB7B929A3836400AF6E6D /* Assets.xcassets */,
 				04FFB7BB29A3836400AF6E6D /* Preview Content */,
+				04D8859429A4525F0066C3FE /* Launch Screen.storyboard */,
 			);
 			path = "grey-github-outlet-ayokunle";
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				04D8858929A4471F0066C3FE /* Manrope-Bold.ttf in Resources */,
 				04D8858F29A4471F0066C3FE /* Manrope-Medium.ttf in Resources */,
 				04D8858E29A4471F0066C3FE /* Manrope-SemiBold.ttf in Resources */,
+				04D8859529A4525F0066C3FE /* Launch Screen.storyboard in Resources */,
 				04FFB7BA29A3836400AF6E6D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +530,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -556,6 +561,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
