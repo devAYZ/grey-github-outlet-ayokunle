@@ -25,7 +25,7 @@ struct RepositoriesView: View {
                     }
                     .frame(width: 85, height: 35)
                     .foregroundColor(.white)
-                    .background(.black)
+                    .background(Color.black)
                     .cornerRadius(4)
                     .frame(maxWidth: .infinity)
                     .modifier(ManropeFont(fName: .extrabold, size: 12))
@@ -43,7 +43,6 @@ struct RepositoriesView: View {
                     Image("search-large")
                     Text(RepositoriesView.emptyText)
                         .multilineTextAlignment(.center)
-                        .fontWeight(.light)
                         .modifier(ManropeFont(fName: .medium, size: 12))
 
                 }
