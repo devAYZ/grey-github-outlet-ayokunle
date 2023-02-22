@@ -18,18 +18,22 @@ struct UsersView: View {
             ZStack {
                 
                 HStack(spacing: 0) {
+                    
                     searchBar
                         .frame(maxWidth: .infinity)
                         .clipped()
+                    
+                    Spacer()
+                    
                     Button("Search") {
-                        print("yes")
+                        handleSearchButtonClicked()
                     }
                     .frame(width: 85, height: 35)
                     .foregroundColor(.white)
                     .background(Color.black)
                     .cornerRadius(4)
-                    .frame(maxWidth: .infinity)
                     .modifier(ManropeFont(fName: .extrabold, size: 12))
+                    
                 }
                 .frame(minWidth: 0,
                        maxWidth: .infinity,
@@ -66,10 +70,13 @@ struct UsersView: View {
                 .modifier(ManropeFont(fName: .regular, size: 10))
         }
         .padding(10)
-        .background(Color.white)
-        .cornerRadius(4)
         .border(.gray)
         .frame(height: 35)
-        .cornerRadius(4)
+        .cornerRadius(3)
+        .background(Color.white)
+    }
+    
+    func handleSearchButtonClicked() {
+        
     }
 }

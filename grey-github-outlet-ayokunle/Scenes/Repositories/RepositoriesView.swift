@@ -20,14 +20,16 @@ struct RepositoriesView: View {
                     searchBar
                         .frame(maxWidth: .infinity)
                         .clipped()
+                    
+                    Spacer() // Space
+                    
                     Button("Search") {
-                        print("yes")
+                        handleSearchButtonClicked()
                     }
                     .frame(width: 85, height: 35)
                     .foregroundColor(.white)
                     .background(Color.black)
                     .cornerRadius(4)
-                    .frame(maxWidth: .infinity)
                     .modifier(ManropeFont(fName: .extrabold, size: 12))
                 }
                 .frame(minWidth: 0,
@@ -66,9 +68,12 @@ struct RepositoriesView: View {
         }
         .padding(10)
         .background(Color.white)
-        .cornerRadius(4)
         .border(.gray)
         .frame(height: 35)
-        .cornerRadius(4)
+        .cornerRadius(3)
+    }
+    
+    func handleSearchButtonClicked() {
+        
     }
 }
