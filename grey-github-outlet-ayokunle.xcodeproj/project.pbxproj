@@ -14,6 +14,7 @@
 		0460E67029A387AF00BEC56F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E66F29A387AF00BEC56F /* HomeView.swift */; };
 		0460E67329A3889300BEC56F /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67229A3889300BEC56F /* RepositoriesView.swift */; };
 		0460E67629A388BF00BEC56F /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67529A388BF00BEC56F /* UsersView.swift */; };
+		04D7E6DA29A697A9000FDB23 /* View + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7E6D929A697A9000FDB23 /* View + Ext.swift */; };
 		04D8858929A4471F0066C3FE /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67A29A3DF3800BEC56F /* Manrope-Bold.ttf */; };
 		04D8858A29A4471F0066C3FE /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67929A3DF3700BEC56F /* Manrope-ExtraBold.ttf */; };
 		04D8858B29A4471F0066C3FE /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67D29A3DF3800BEC56F /* Manrope-Regular.ttf */; };
@@ -64,6 +65,7 @@
 		0460E67E29A3DF3900BEC56F /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
 		0460E67F29A3DF3900BEC56F /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
 		0460E68029A3DF6A00BEC56F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		04D7E6D929A697A9000FDB23 /* View + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Ext.swift"; sourceTree = "<group>"; };
 		04D8859129A44A7A0066C3FE /* ManropeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManropeFont.swift; sourceTree = "<group>"; };
 		04D8859429A4525F0066C3FE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		04FFB7B229A3836200AF6E6D /* grey-github-outlet-ayokunle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grey-github-outlet-ayokunle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				04D8859129A44A7A0066C3FE /* ManropeFont.swift */,
+				04D7E6D929A697A9000FDB23 /* View + Ext.swift */,
 			);
 			path = "Modifiers + Ext";
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				0441CCCA29A466CC00C68CEE /* HomeModel.swift in Sources */,
 				04FFB7B829A3836200AF6E6D /* RootView.swift in Sources */,
 				04FFB7B629A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift in Sources */,
+				04D7E6DA29A697A9000FDB23 /* View + Ext.swift in Sources */,
 				04D8859229A44A7A0066C3FE /* ManropeFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
