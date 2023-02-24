@@ -59,9 +59,11 @@ struct UserCell: View {
     var body: some View {
         ZStack(alignment: .leading) {
             Color("cyan")
-            VStack(alignment: .leading, spacing: 30) {
+            VStack(alignment: .leading, spacing: 25) {
                 Image("user")
-                    .frame(width: 20, height: 20)
+                    .frame(width: 30, height: 30)
+                    .background(Color.white)
+                    .cornerRadius(4)
                 Text(viewModel.constantViewModel.users).fontWeight(.bold)
                     .modifier(ManropeFont(fName: .regular, size: 16))
             }
@@ -84,11 +86,11 @@ struct RepoCell: View {
     var body: some View {
         ZStack(alignment: .leading) {
             Color("tintRed")
-            VStack(alignment: .leading, spacing: 30) {
+            VStack(alignment: .leading, spacing: 25) {
                 Image("save")
-                    .foregroundColor(Color.white)
-                    .frame(width: 20, height: 20)
-                    .cornerRadius(2)
+                    .frame(width: 30, height: 30)
+                    .background(Color.white)
+                    .cornerRadius(4)
                 Text(viewModel.constantViewModel.repositories).fontWeight(.bold)
                     .modifier(ManropeFont(fName: .regular, size: 16))
             }
