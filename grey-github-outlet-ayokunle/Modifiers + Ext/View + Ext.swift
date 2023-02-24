@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ProgressHUD
 import SwiftUI
 
 #if canImport(UIKit)
@@ -17,4 +18,17 @@ extension View {
 #endif
 
 extension View {
+    
+    func showLoader() {
+        ProgressHUD.animationType = .circleRotateChase
+        ProgressHUD.colorHUD = .clear
+        ProgressHUD.colorBackground = .clear
+        ProgressHUD.colorAnimation = .black
+        ProgressHUD.colorProgress = .clear
+        ProgressHUD.show()
+    }
+    
+    func hideLoader() {
+        ProgressHUD.dismiss()
+    }
 }

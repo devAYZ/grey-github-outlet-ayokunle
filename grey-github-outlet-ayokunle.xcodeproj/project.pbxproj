@@ -24,6 +24,7 @@
 		04D8858F29A4471F0066C3FE /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67E29A3DF3900BEC56F /* Manrope-Medium.ttf */; };
 		04D8859229A44A7A0066C3FE /* ManropeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8859129A44A7A0066C3FE /* ManropeFont.swift */; };
 		04D8859529A4525F0066C3FE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D8859429A4525F0066C3FE /* Launch Screen.storyboard */; };
+		04E3982929A927FD00E3D2E9 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 04E3982829A927FD00E3D2E9 /* ProgressHUD */; };
 		04FFB7B629A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB7B529A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift */; };
 		04FFB7B829A3836200AF6E6D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB7B729A3836200AF6E6D /* RootView.swift */; };
 		04FFB7BA29A3836400AF6E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FFB7B929A3836400AF6E6D /* Assets.xcassets */; };
@@ -86,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0441CCCF29A47BE700C68CEE /* Alamofire in Frameworks */,
+				04E3982929A927FD00E3D2E9 /* ProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +271,7 @@
 			name = "grey-github-outlet-ayokunle";
 			packageProductDependencies = (
 				0441CCCE29A47BE700C68CEE /* Alamofire */,
+				04E3982829A927FD00E3D2E9 /* ProgressHUD */,
 			);
 			productName = "grey-github-outlet-ayokunle";
 			productReference = 04FFB7B229A3836200AF6E6D /* grey-github-outlet-ayokunle.app */;
@@ -344,6 +347,7 @@
 			mainGroup = 04FFB7A929A3836100AF6E6D;
 			packageReferences = (
 				0441CCCD29A47BE700C68CEE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				04E3982729A927FD00E3D2E9 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = 04FFB7B329A3836200AF6E6D /* Products */;
 			projectDirPath = "";
@@ -747,6 +751,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		04E3982729A927FD00E3D2E9 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -754,6 +766,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0441CCCD29A47BE700C68CEE /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		04E3982829A927FD00E3D2E9 /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04E3982729A927FD00E3D2E9 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

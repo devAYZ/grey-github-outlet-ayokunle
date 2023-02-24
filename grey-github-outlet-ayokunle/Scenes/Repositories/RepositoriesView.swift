@@ -102,7 +102,11 @@ struct RepositoriesView: View {
     }
     
     func handleSearchButtonClicked() {
-        hideTableView.toggle()
-        hideKeyboard()
+        showLoader()
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
+            self.hideLoader()
+            self.hideTableView.toggle()
+            self.hideKeyboard()
+        }
     }
 }
