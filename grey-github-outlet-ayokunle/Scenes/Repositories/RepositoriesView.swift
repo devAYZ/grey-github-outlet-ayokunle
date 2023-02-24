@@ -10,9 +10,11 @@ import SwiftUI
 
 struct RepositoriesView: View {
     
-    static let emptyText = "Search Github for repositories, issues and pull requests!"
-    @Binding var repoInfo: String
+    @Binding var repoSearchInput: String
     @State var hideTableView = true
+    static let beginSearchRepoText = "Search Github for repositories, issues and pull requests!"
+    static let emptySearchRepoText = "We’ve searched the ends of the earth, repository not found, please try again"
+    @State var searchRepoText = beginSearchRepoText
     
     var body: some View {
         NavigationView {
@@ -44,7 +46,7 @@ struct RepositoriesView: View {
                     ZStack {
                         VStack(spacing: 20) {
                             Image("search-large")
-                            Text(RepositoriesView.emptyText)
+                            Text(searchRepoText)
                                 .multilineTextAlignment(.center)
                                 .modifier(ManropeFont(fName: .medium, size: 12))
                             
@@ -74,14 +76,14 @@ struct RepositoriesView: View {
         HStack {
             Image("search-small")
             if #available(iOS 15.0, *) {
-                TextField("Search for repositories...", text: $repoInfo)
+                TextField("Search for repositories...", text: $repoSearchInput)
                     .modifier(ManropeFont(fName: .regular, size: 12))
                     .onSubmit {
                         handleSearchButtonClicked()
                     }
             } else {
                 // Fallback on earlier versions
-                TextField("Search for repositories...", text: $repoInfo)
+                TextField("Search for repositories...", text: $repoSearchInput)
                     .modifier(ManropeFont(fName: .regular, size: 12))
             }
         }
@@ -105,8 +107,14 @@ struct RepositoriesView: View {
         showLoader()
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
             self.hideLoader()
-            self.hideTableView.toggle()
-            self.hideKeyboard()
+            if repoSearchInput.count > 0 {
+                self.hideTableView = false
+                self.hideKeyboard()
+                searchRepoText = RepositoriesView.beginSearchRepoText
+            } else {
+                self.hideTableView = true
+                searchRepoText = RepositoriesView.emptySearchRepoText
+            }
         }
     }
 }

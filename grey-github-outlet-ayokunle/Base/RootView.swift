@@ -20,13 +20,13 @@ struct RootView: View {
                         Text("Home")
                     }
                     .tag("home")
-                RepositoriesView(repoInfo: $repoInfo)
+                RepositoriesView(repoSearchInput: $repoInfo)
                     .tabItem {
                         Image("search-normal")
                         Text("Repositories")
                     }
                     .tag("repo")
-                UsersView(repoInfo: $repoInfo)
+                UsersView(userSearchInput: $repoInfo)
                     .tabItem {
                         Image("user")
                         Text("Users")

@@ -10,9 +10,11 @@ import SwiftUI
 
 struct UsersView: View {
     
-    static let emptyText = "Search Github for users..."
-    @Binding var repoInfo: String
+    @Binding var userSearchInput: String
     @State var hideTableView = true
+    static let beginSearchUserText = "Search Github for users..."
+    static let emptySearchUserText = "We’ve searched the ends of the earth and we’ve not found this user, please try again"
+    @State var searchUserText = beginSearchUserText
     
     var body: some View {
         NavigationView {
@@ -48,7 +50,7 @@ struct UsersView: View {
                     ZStack {
                         VStack(spacing: 20) {
                             Image("search-large")
-                            Text(UsersView.emptyText)
+                            Text(searchUserText)
                                 .multilineTextAlignment(.center)
                                 .modifier(ManropeFont(fName: .medium, size: 12))
 
@@ -80,14 +82,14 @@ struct UsersView: View {
         HStack {
             Image("search-small")
             if #available(iOS 15.0, *) {
-                TextField("Search for users...", text: $repoInfo)
+                TextField("Search for users...", text: $userSearchInput)
                     .modifier(ManropeFont(fName: .regular, size: 12))
                     .onSubmit {
                         handleSearchButtonClicked()
                     }
             } else {
                 // Fallback on earlier versions
-                TextField("Search for users...", text: $repoInfo)
+                TextField("Search for users...", text: $userSearchInput)
                     .modifier(ManropeFont(fName: .regular, size: 12))
             }
         }
@@ -110,9 +112,15 @@ struct UsersView: View {
     func handleSearchButtonClicked() {
         showLoader()
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
-            self.hideLoader()
-            self.hideTableView.toggle()
-            self.hideKeyboard()
+            hideLoader()
+            if userSearchInput.count > 0 {
+                self.hideTableView = false
+                self.hideKeyboard()
+                searchUserText = UsersView.beginSearchUserText
+            } else {
+                self.hideTableView = true
+                searchUserText = UsersView.emptySearchUserText
+            }
         }
     }
 }
