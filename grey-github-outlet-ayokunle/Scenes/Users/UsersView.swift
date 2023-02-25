@@ -16,6 +16,9 @@ struct UsersView: View {
     static let emptySearchUserText = "We’ve searched the ends of the earth and we’ve not found this user, please try again"
     @State var searchUserText = beginSearchUserText
     
+    @ObservedObject var usersVM = UsersViewModel()
+    @State private var showSearchInputAlert = false
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -76,6 +79,10 @@ struct UsersView: View {
             }
         }
         .accentColor(Color(.label)) // Navigation back color
+        .alert(isPresented: $showSearchInputAlert) {
+            Alert(title: Text(""), message: Text("Search field cannot be empty"))
+        }
+
     }
     
     var searchBar: some View {
@@ -84,6 +91,8 @@ struct UsersView: View {
             if #available(iOS 15.0, *) {
                 TextField("Search for users...", text: $userSearchInput)
                     .modifier(ManropeFont(fName: .regular, size: 12))
+                    .autocorrectionDisabled()
+                    .autocapitalization(.none)
                     .onSubmit {
                         handleSearchButtonClicked()
                     }
@@ -102,24 +111,38 @@ struct UsersView: View {
     
     var tableView: some View {
         List {
-            ForEach(1..<21) { i in
-                Text("\(userSearchInput) \(i)")
+            ForEach(usersVM.usersList) { user in
+                Text(user.login ?? "")
             }
             .modifier(ManropeFont(fName: .medium, size: 13))
         }
     }
     
     func handleSearchButtonClicked() {
+        guard !userSearchInput.isEmpty else {
+            showSearchInputAlert = true
+            return
+        }
+        
+        hideKeyboard()
         showLoader()
-        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
+        
+        usersVM.searchUsers(searchText: userSearchInput) { response in
             hideLoader()
-            if userSearchInput.count > 0 {
-                self.hideTableView = false
-                self.hideKeyboard()
-                searchUserText = UsersView.beginSearchUserText
-            } else {
-                self.hideTableView = true
-                searchUserText = UsersView.emptySearchUserText
+            DispatchQueue.main.async {
+                switch response.result {
+                case .success(let data):
+                    guard let usersItems = data.items, !usersItems.isEmpty else {
+                        //
+                        hideTableView = true
+                        searchUserText = UsersView.emptySearchUserText
+                        return
+                    }
+                    usersVM.usersList = usersItems
+                    hideTableView = false
+                case .failure(let error):
+                    print(error.errorDescription ?? "")
+                }
             }
         }
     }

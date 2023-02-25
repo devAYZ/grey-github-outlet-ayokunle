@@ -20,7 +20,14 @@
 		046EB66B29AA1655002ED6F1 /* InfoPlistParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB66A29AA1655002ED6F1 /* InfoPlistParser.swift */; };
 		046EB66D29AA18DB002ED6F1 /* SchemeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB66C29AA18DB002ED6F1 /* SchemeMode.swift */; };
 		046EB66F29AA2007002ED6F1 /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB66E29AA2007002ED6F1 /* RepositoriesModel.swift */; };
-		046EB67229AA21AC002ED6F1 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB67129AA21AC002ED6F1 /* NetworkModel.swift */; };
+		046EB67529AA4B26002ED6F1 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB67429AA4B26002ED6F1 /* UsersModel.swift */; };
+		046EB67929AA4BEC002ED6F1 /* RepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB67829AA4BEC002ED6F1 /* RepositoriesResponse.swift */; };
+		046EB67B29AA4C23002ED6F1 /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB67A29AA4C23002ED6F1 /* UsersResponse.swift */; };
+		046EB67D29AA4C3D002ED6F1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB67C29AA4C3D002ED6F1 /* Item.swift */; };
+		046EB67F29AA4CA1002ED6F1 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB67E29AA4CA1002ED6F1 /* EmptyResponse.swift */; };
+		046EB68129AA4CB8002ED6F1 /* EmptyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB68029AA4CB8002ED6F1 /* EmptyRequest.swift */; };
+		046EB68329AA4F75002ED6F1 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB68229AA4F75002ED6F1 /* RepositoriesViewModel.swift */; };
+		046EB68529AA5918002ED6F1 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB68429AA5918002ED6F1 /* UsersViewModel.swift */; };
 		04D7E6DA29A697A9000FDB23 /* View + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7E6D929A697A9000FDB23 /* View + Ext.swift */; };
 		04D8858929A4471F0066C3FE /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67A29A3DF3800BEC56F /* Manrope-Bold.ttf */; };
 		04D8858A29A4471F0066C3FE /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67929A3DF3700BEC56F /* Manrope-ExtraBold.ttf */; };
@@ -79,7 +86,14 @@
 		046EB66A29AA1655002ED6F1 /* InfoPlistParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistParser.swift; sourceTree = "<group>"; };
 		046EB66C29AA18DB002ED6F1 /* SchemeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeMode.swift; sourceTree = "<group>"; };
 		046EB66E29AA2007002ED6F1 /* RepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
-		046EB67129AA21AC002ED6F1 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		046EB67429AA4B26002ED6F1 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		046EB67829AA4BEC002ED6F1 /* RepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesResponse.swift; sourceTree = "<group>"; };
+		046EB67A29AA4C23002ED6F1 /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
+		046EB67C29AA4C3D002ED6F1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		046EB67E29AA4CA1002ED6F1 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		046EB68029AA4CB8002ED6F1 /* EmptyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRequest.swift; sourceTree = "<group>"; };
+		046EB68229AA4F75002ED6F1 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
+		046EB68429AA5918002ED6F1 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		04D7E6D929A697A9000FDB23 /* View + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Ext.swift"; sourceTree = "<group>"; };
 		04D8859129A44A7A0066C3FE /* ManropeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManropeFont.swift; sourceTree = "<group>"; };
 		04D8859429A4525F0066C3FE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -146,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				0460E67229A3889300BEC56F /* RepositoriesView.swift */,
+				046EB68229AA4F75002ED6F1 /* RepositoriesViewModel.swift */,
 				046EB66E29AA2007002ED6F1 /* RepositoriesModel.swift */,
 			);
 			path = Repositories;
@@ -155,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				0460E67529A388BF00BEC56F /* UsersView.swift */,
+				046EB68429AA5918002ED6F1 /* UsersViewModel.swift */,
+				046EB67429AA4B26002ED6F1 /* UsersModel.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -196,17 +213,29 @@
 		046EB67029AA218D002ED6F1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				046EB67329AA21C0002ED6F1 /* Network */,
-				046EB67129AA21AC002ED6F1 /* NetworkModel.swift */,
+				046EB67729AA4BAE002ED6F1 /* Requests */,
+				046EB67629AA4B98002ED6F1 /* Responses */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		046EB67329AA21C0002ED6F1 /* Network */ = {
+		046EB67629AA4B98002ED6F1 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				046EB67E29AA4CA1002ED6F1 /* EmptyResponse.swift */,
+				046EB67829AA4BEC002ED6F1 /* RepositoriesResponse.swift */,
+				046EB67A29AA4C23002ED6F1 /* UsersResponse.swift */,
+				046EB67C29AA4C3D002ED6F1 /* Item.swift */,
 			);
-			path = Network;
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		046EB67729AA4BAE002ED6F1 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				046EB68029AA4CB8002ED6F1 /* EmptyRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		04D7E6DB29A69B1E000FDB23 /* SupportingFiles */ = {
@@ -445,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0460E67629A388BF00BEC56F /* UsersView.swift in Sources */,
+				046EB68129AA4CB8002ED6F1 /* EmptyRequest.swift in Sources */,
 				0460E67329A3889300BEC56F /* RepositoriesView.swift in Sources */,
 				0460E67029A387AF00BEC56F /* HomeView.swift in Sources */,
 				0441CCD129A5372600C68CEE /* AppDelegate.swift in Sources */,
@@ -452,15 +482,21 @@
 				046EB66B29AA1655002ED6F1 /* InfoPlistParser.swift in Sources */,
 				0441CCCA29A466CC00C68CEE /* HomeModel.swift in Sources */,
 				046EB66929AA15C7002ED6F1 /* NetworkCall.swift in Sources */,
-				046EB67229AA21AC002ED6F1 /* NetworkModel.swift in Sources */,
+				046EB67529AA4B26002ED6F1 /* UsersModel.swift in Sources */,
 				04FFB7B829A3836200AF6E6D /* RootView.swift in Sources */,
+				046EB67B29AA4C23002ED6F1 /* UsersResponse.swift in Sources */,
 				04FFB7B629A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift in Sources */,
+				046EB68529AA5918002ED6F1 /* UsersViewModel.swift in Sources */,
 				04D7E6DA29A697A9000FDB23 /* View + Ext.swift in Sources */,
 				046EB66F29AA2007002ED6F1 /* RepositoriesModel.swift in Sources */,
 				04D8859229A44A7A0066C3FE /* ManropeFont.swift in Sources */,
+				046EB67F29AA4CA1002ED6F1 /* EmptyResponse.swift in Sources */,
+				046EB68329AA4F75002ED6F1 /* RepositoriesViewModel.swift in Sources */,
 				046EB66D29AA18DB002ED6F1 /* SchemeMode.swift in Sources */,
+				046EB67D29AA4C3D002ED6F1 /* Item.swift in Sources */,
 				046EB66729AA149A002ED6F1 /* Endpoints.swift in Sources */,
 				046EB66529AA146C002ED6F1 /* NetworkCallModel.swift in Sources */,
+				046EB67929AA4BEC002ED6F1 /* RepositoriesResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

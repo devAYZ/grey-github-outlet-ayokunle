@@ -21,9 +21,9 @@ extension View {
     
     func showLoader() {
         ProgressHUD.animationType = .circleRotateChase
-        ProgressHUD.colorHUD = .clear
+        ProgressHUD.colorHUD = .black
         ProgressHUD.colorBackground = .clear
-        ProgressHUD.colorAnimation = .black
+        ProgressHUD.colorAnimation = .white
         ProgressHUD.colorProgress = .clear
         ProgressHUD.show()
     }

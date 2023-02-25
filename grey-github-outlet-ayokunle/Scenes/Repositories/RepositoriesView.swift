@@ -16,6 +16,9 @@ struct RepositoriesView: View {
     static let emptySearchRepoText = "We’ve searched the ends of the earth, repository not found, please try again"
     @State var searchRepoText = beginSearchRepoText
     
+    @ObservedObject var repositoriesVM = RepositoriesViewModel()
+    @State private var showSearchInputAlert = false
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -69,6 +72,9 @@ struct RepositoriesView: View {
                     }
                 }
             }
+            .alert(isPresented: $showSearchInputAlert) {
+                Alert(title: Text(""), message: Text("Search field cannot be empty"))
+            }
         }
     }
     
@@ -78,6 +84,8 @@ struct RepositoriesView: View {
             if #available(iOS 15.0, *) {
                 TextField("Search for repositories...", text: $repoSearchInput)
                     .modifier(ManropeFont(fName: .regular, size: 12))
+                    .autocorrectionDisabled()
+                    .autocapitalization(.none)
                     .onSubmit {
                         handleSearchButtonClicked()
                     }
@@ -96,25 +104,39 @@ struct RepositoriesView: View {
     
     var tableView: some View {
         List {
-            ForEach(1..<21) { i in
-                Text("\(repoSearchInput) \(i)")
+            ForEach(repositoriesVM.repoList) { repo in
+                Text(repo.fullName ?? "")
             }
             .modifier(ManropeFont(fName: .medium, size: 13))
         }
     }
     
     func handleSearchButtonClicked() {
+        guard !repoSearchInput.isEmpty else {
+            showSearchInputAlert = true
+            return
+        }
+        
+        hideKeyboard()
         showLoader()
-        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
-            self.hideLoader()
-            if repoSearchInput.count > 0 {
-                self.hideTableView = false
-                self.hideKeyboard()
-                searchRepoText = RepositoriesView.beginSearchRepoText
-            } else {
-                self.hideTableView = true
-                searchRepoText = RepositoriesView.emptySearchRepoText
+        repositoriesVM.searchRepo(searchText: repoSearchInput) { response in
+            hideLoader()
+            DispatchQueue.main.async {
+                switch response.result {
+                case .success(let data):
+                    guard let repoItems = data.items, !repoItems.isEmpty else {
+                        //
+                        hideTableView = true
+                        searchRepoText = RepositoriesView.emptySearchRepoText
+                        return
+                    }
+                    repositoriesVM.repoList = repoItems
+                    hideTableView = false
+                case .failure(let error):
+                    print(error.errorDescription ?? "")
+                }
             }
         }
     }
+    
 }
