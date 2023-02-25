@@ -14,6 +14,13 @@
 		0460E67029A387AF00BEC56F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E66F29A387AF00BEC56F /* HomeView.swift */; };
 		0460E67329A3889300BEC56F /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67229A3889300BEC56F /* RepositoriesView.swift */; };
 		0460E67629A388BF00BEC56F /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E67529A388BF00BEC56F /* UsersView.swift */; };
+		046EB66529AA146C002ED6F1 /* NetworkCallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB66429AA146C002ED6F1 /* NetworkCallModel.swift */; };
+		046EB66729AA149A002ED6F1 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB66629AA149A002ED6F1 /* Endpoints.swift */; };
+		046EB66929AA15C7002ED6F1 /* NetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB66829AA15C7002ED6F1 /* NetworkCall.swift */; };
+		046EB66B29AA1655002ED6F1 /* InfoPlistParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB66A29AA1655002ED6F1 /* InfoPlistParser.swift */; };
+		046EB66D29AA18DB002ED6F1 /* SchemeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB66C29AA18DB002ED6F1 /* SchemeMode.swift */; };
+		046EB66F29AA2007002ED6F1 /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB66E29AA2007002ED6F1 /* RepositoriesModel.swift */; };
+		046EB67229AA21AC002ED6F1 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB67129AA21AC002ED6F1 /* NetworkModel.swift */; };
 		04D7E6DA29A697A9000FDB23 /* View + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7E6D929A697A9000FDB23 /* View + Ext.swift */; };
 		04D8858929A4471F0066C3FE /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67A29A3DF3800BEC56F /* Manrope-Bold.ttf */; };
 		04D8858A29A4471F0066C3FE /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0460E67929A3DF3700BEC56F /* Manrope-ExtraBold.ttf */; };
@@ -66,6 +73,13 @@
 		0460E67E29A3DF3900BEC56F /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
 		0460E67F29A3DF3900BEC56F /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
 		0460E68029A3DF6A00BEC56F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		046EB66429AA146C002ED6F1 /* NetworkCallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCallModel.swift; sourceTree = "<group>"; };
+		046EB66629AA149A002ED6F1 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		046EB66829AA15C7002ED6F1 /* NetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCall.swift; sourceTree = "<group>"; };
+		046EB66A29AA1655002ED6F1 /* InfoPlistParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistParser.swift; sourceTree = "<group>"; };
+		046EB66C29AA18DB002ED6F1 /* SchemeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeMode.swift; sourceTree = "<group>"; };
+		046EB66E29AA2007002ED6F1 /* RepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
+		046EB67129AA21AC002ED6F1 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		04D7E6D929A697A9000FDB23 /* View + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Ext.swift"; sourceTree = "<group>"; };
 		04D8859129A44A7A0066C3FE /* ManropeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManropeFont.swift; sourceTree = "<group>"; };
 		04D8859429A4525F0066C3FE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -132,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				0460E67229A3889300BEC56F /* RepositoriesView.swift */,
+				046EB66E29AA2007002ED6F1 /* RepositoriesModel.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -148,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				0460E67829A3DE1500BEC56F /* Font */,
+				046EB66A29AA1655002ED6F1 /* InfoPlistParser.swift */,
+				046EB66C29AA18DB002ED6F1 /* SchemeMode.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -164,6 +181,32 @@
 				0460E67F29A3DF3900BEC56F /* Manrope-SemiBold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		046EB66329AA1440002ED6F1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				046EB66429AA146C002ED6F1 /* NetworkCallModel.swift */,
+				046EB66629AA149A002ED6F1 /* Endpoints.swift */,
+				046EB66829AA15C7002ED6F1 /* NetworkCall.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		046EB67029AA218D002ED6F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				046EB67329AA21C0002ED6F1 /* Network */,
+				046EB67129AA21AC002ED6F1 /* NetworkModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		046EB67329AA21C0002ED6F1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		04D7E6DB29A69B1E000FDB23 /* SupportingFiles */ = {
@@ -218,10 +261,12 @@
 		04FFB7B429A3836200AF6E6D /* grey-github-outlet-ayokunle */ = {
 			isa = PBXGroup;
 			children = (
+				046EB67029AA218D002ED6F1 /* Models */,
 				04D8859329A450B30066C3FE /* Scenes */,
 				0441CCC829A45C4600C68CEE /* Base */,
 				04D8859029A44A310066C3FE /* Modifiers + Ext */,
 				0460E67729A3DE0E00BEC56F /* Resources */,
+				046EB66329AA1440002ED6F1 /* Networking */,
 				04D7E6DB29A69B1E000FDB23 /* SupportingFiles */,
 				04FFB7BB29A3836400AF6E6D /* Preview Content */,
 			);
@@ -404,11 +449,18 @@
 				0460E67029A387AF00BEC56F /* HomeView.swift in Sources */,
 				0441CCD129A5372600C68CEE /* AppDelegate.swift in Sources */,
 				0441CCCC29A466D500C68CEE /* HomeViewModel.swift in Sources */,
+				046EB66B29AA1655002ED6F1 /* InfoPlistParser.swift in Sources */,
 				0441CCCA29A466CC00C68CEE /* HomeModel.swift in Sources */,
+				046EB66929AA15C7002ED6F1 /* NetworkCall.swift in Sources */,
+				046EB67229AA21AC002ED6F1 /* NetworkModel.swift in Sources */,
 				04FFB7B829A3836200AF6E6D /* RootView.swift in Sources */,
 				04FFB7B629A3836200AF6E6D /* grey_github_outlet_ayokunleApp.swift in Sources */,
 				04D7E6DA29A697A9000FDB23 /* View + Ext.swift in Sources */,
+				046EB66F29AA2007002ED6F1 /* RepositoriesModel.swift in Sources */,
 				04D8859229A44A7A0066C3FE /* ManropeFont.swift in Sources */,
+				046EB66D29AA18DB002ED6F1 /* SchemeMode.swift in Sources */,
+				046EB66729AA149A002ED6F1 /* Endpoints.swift in Sources */,
+				046EB66529AA146C002ED6F1 /* NetworkCallModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +616,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = api.github.com;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"grey-github-outlet-ayokunle/Preview Content\"";
@@ -586,6 +639,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devAYZ.grey-github-outlet-ayokunle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCHEME_MODE = development;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -597,6 +651,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = api.github.com;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"grey-github-outlet-ayokunle/Preview Content\"";
@@ -619,6 +674,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devAYZ.grey-github-outlet-ayokunle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCHEME_MODE = production;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

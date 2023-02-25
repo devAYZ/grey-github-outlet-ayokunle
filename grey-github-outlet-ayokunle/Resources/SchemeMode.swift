@@ -1,0 +1,13 @@
+//
+//  SchemeMode.swift
+//  grey-github-outlet-ayokunle
+//
+//  Created by Ayokunle Pro on 2/25/23.
+//
+
+import Foundation
+
+public enum SchemeMode: String {
+    case development
+    case production
+}
