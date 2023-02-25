@@ -5,14 +5,13 @@
 //  Created by Ayokunle Pro on 2/25/23.
 //
 
-import Alamofire
 import Foundation
 
 class UsersViewModel: ObservableObject {
     
     @Published var usersList = [Item]()
     
-    func searchUsers(searchText: String, completion: @escaping (DataResponse<RepositoriesResponse, AFError>) -> Void) {
+    func searchUsers(searchText: String, completion: @escaping (NetworkResponseType<RepositoriesResponse>) -> Void) {
         NetworkCall.shared.makeAPICall(with: getUserRequestObject(searchText: searchText)) { response in
             completion(response)
         }

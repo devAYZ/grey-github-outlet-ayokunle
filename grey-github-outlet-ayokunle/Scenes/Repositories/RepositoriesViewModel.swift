@@ -6,13 +6,12 @@
 //
 
 import Foundation
-import Alamofire
 
 class RepositoriesViewModel: ObservableObject {
     
     @Published var repoList = [Item]()
     
-    func searchRepo(searchText: String, completion: @escaping (DataResponse<RepositoriesResponse, AFError>) -> Void) {
+    func searchRepo(searchText: String, completion: @escaping (NetworkResponseType<RepositoriesResponse>) -> Void) {
         NetworkCall.shared.makeAPICall(with: getRepositoriesRequestObject(searchText: searchText)) { response in
             completion(response)
         }

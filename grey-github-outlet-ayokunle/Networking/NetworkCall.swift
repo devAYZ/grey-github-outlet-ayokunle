@@ -5,8 +5,8 @@
 //  Created by Ayokunle Pro on 2/25/23.
 //
 
-import Foundation
 import Alamofire
+import Foundation
 
 public protocol NetworkCallProtocol {
     /// Make API Call, Generic Method
@@ -14,7 +14,7 @@ public protocol NetworkCallProtocol {
     ///   - requestModel: Request Model Object
     ///   - completion: Use/Switch the response result
     func makeAPICall<Q: Codable, A: Decodable>(
-        with requestModel: NetworkCallModel<Q, A>, completion: @escaping (DataResponse<A, AFError>) -> Void
+        with requestModel: NetworkCallModel<Q, A>, completion: @escaping (NetworkResponseType<A>) -> Void
     )
 }
 
@@ -23,7 +23,7 @@ class NetworkCall: NetworkCallProtocol {
     static let shared = NetworkCall()
     
     // MARK: API call
-    func makeAPICall<Q: Decodable, A: Decodable>(with requestModel: NetworkCallModel<Q, A>, completion: @escaping (DataResponse<A, AFError>) -> Void) {
+    func makeAPICall<Q: Decodable, A: Decodable>(with requestModel: NetworkCallModel<Q, A>, completion: @escaping (NetworkResponseType<A>) -> Void) {
         
         let schemeMode = SchemeMode(rawValue: InfoPlistParser.getStringValue(key: "SCHEME_MODE"))
         let urlScheme = Endpoints.https.rawValue

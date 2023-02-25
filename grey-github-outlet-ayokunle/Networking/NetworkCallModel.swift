@@ -5,8 +5,8 @@
 //  Created by Ayokunle Pro on 2/25/23.
 //
 
-import Foundation
 import Alamofire
+import Foundation
 
 /// Request Model , (Q: Question) Request Type , (A: Answer) Response Type
 public struct NetworkCallModel<Q: Codable, A:Decodable> {
@@ -45,3 +45,5 @@ public struct NetworkHeaders {
 public struct QueryParameters {
     var value: Parameters
 }
+
+public typealias NetworkResponseType<A> = DataResponse<A, AFError>
