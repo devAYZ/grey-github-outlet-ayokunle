@@ -97,7 +97,7 @@ struct RepositoriesView: View {
     var tableView: some View {
         List {
             ForEach(1..<21) { i in
-                Text("Demo-Repository \(i)")
+                Text("\(repoSearchInput) \(i)")
             }
             .modifier(ManropeFont(fName: .medium, size: 13))
         }

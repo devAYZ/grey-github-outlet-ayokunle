@@ -103,7 +103,7 @@ struct UsersView: View {
     var tableView: some View {
         List {
             ForEach(1..<21) { i in
-                Text("Demo-User \(i)")
+                Text("\(userSearchInput) \(i)")
             }
             .modifier(ManropeFont(fName: .medium, size: 13))
         }

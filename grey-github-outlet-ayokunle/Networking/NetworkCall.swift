@@ -30,10 +30,12 @@ class NetworkCall: NetworkCallProtocol {
         let baseUrl = InfoPlistParser.getStringValue(key: "BASE_URL")
         let urlPath = requestModel.endpoint
         
+        let requestUrl = urlScheme + baseUrl + urlPath
         let requestObject =  requestModel.requestObject
         let requestMethod = requestModel.requestMethod
         let responseType = requestModel.responseType
-        let requestUrl = urlScheme + baseUrl + urlPath
+        let requestQueryParams = requestModel.queryparameters?.value
+        
         var requestHeaders: HTTPHeaders = [
             "content-type": "application/json",
             "x-channel": "iOS",
@@ -41,14 +43,30 @@ class NetworkCall: NetworkCallProtocol {
             "X-App-Version": InfoPlistParser.getStringValue(key: "CFBundleShortVersionString"),
             "x-lang": "EN"
         ]
-        requestModel.headers?.forEach {
+        requestModel.headers?.value.forEach {
             requestHeaders.update($0)
         }
         
-        let request = AF.request(requestUrl, method: requestMethod,
-                                 parameters: requestObject,
-                                 encoder: JSONParameterEncoder.default,
+        var request = AF.request(requestUrl)
+        
+        if requestMethod == .get {
+            request = AF.request(requestUrl, method: requestMethod,
+                                 parameters: requestQueryParams,
+                                 encoding: URLEncoding.default,
                                  headers: requestHeaders) { urlRequest in
+                // urlRequest
+            }
+        } else {
+            request = AF.request(requestUrl, method: requestMethod,
+                                 parameters: requestObject,
+                                 encoder: .json, //JSONParameterEncoder.default
+                                 headers: requestHeaders) { urlRequest in
+                // urlRequest
+            }
+        }
+        
+        if schemeMode == .development {
+            debugPrint("Endpoint: ", requestUrl)
         }
         
         request.responseDecodable(of: responseType) { response in

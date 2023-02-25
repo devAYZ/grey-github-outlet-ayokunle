@@ -186,9 +186,9 @@
 		046EB66329AA1440002ED6F1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				046EB66829AA15C7002ED6F1 /* NetworkCall.swift */,
 				046EB66429AA146C002ED6F1 /* NetworkCallModel.swift */,
 				046EB66629AA149A002ED6F1 /* Endpoints.swift */,
-				046EB66829AA15C7002ED6F1 /* NetworkCall.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
