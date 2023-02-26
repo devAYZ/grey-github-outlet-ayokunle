@@ -9,29 +9,41 @@ import SwiftUI
 
 struct TabbarRootView: View {
     
-    @State private var selectedTab = "home"
+    @State private var selectedTab: SelectedTab = .home
     @State private var repoInfo = ""
     
     var body: some View {
             TabView(selection: $selectedTab) {
                 HomeView(selectedTab: $selectedTab) // Veiw 1
                     .tabItem {
-                        Image("home")
                         Text("Home")
+                        if selectedTab == .home {
+                            Image("home")
+                        } else {
+                            Image("home0")
+                        }
                     }
-                    .tag("home")
+                    .tag(SelectedTab.home)
                 RepositoriesView(repoSearchInput: $repoInfo)
                     .tabItem {
-                        Image("search-normal")
                         Text("Repositories")
+                        if selectedTab == .repo{
+                            Image("searchSelected")
+                        } else {
+                            Image("search-normal")
+                        }
                     }
-                    .tag("repo")
+                    .tag(SelectedTab.repo)
                 UsersView(userSearchInput: $repoInfo)
                     .tabItem {
-                        Image("user")
                         Text("Users")
+                        if selectedTab == .users {
+                            Image("userSelected")
+                        } else {
+                            Image("user")
+                        }
                     }
-                    .tag("users")
+                    .tag(SelectedTab.users)
             }
             .accentColor(.black)
             .onAppear {

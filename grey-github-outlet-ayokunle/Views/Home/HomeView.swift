@@ -12,7 +12,7 @@ import SwiftUI
 struct HomeView: View {
     
     @State private var gridLayout: [GridItem] = [GridItem(.flexible())]
-    @Binding var selectedTab: String
+    @Binding var selectedTab: SelectedTab
     @ObservedObject var viewModel = HomeViewModel()
     
     var body: some View {
@@ -53,7 +53,7 @@ struct HomeView: View {
 // MARK: User Clickable View
 struct UserCell: View {
     
-    @Binding var selectedTab: String
+    @Binding var selectedTab: SelectedTab
     var viewModel = HomeViewModel()
     
     var body: some View {
@@ -71,7 +71,7 @@ struct UserCell: View {
         }
         .frame(width: 156, height: 118)
         .onTapGesture {
-            selectedTab = viewModel.constantViewModel.usersTag
+            selectedTab = .users
         }
     }
     
@@ -80,7 +80,7 @@ struct UserCell: View {
 // MARK: Repositories Clickable View
 struct RepoCell: View {
     
-    @Binding var selectedTab: String
+    @Binding var selectedTab: SelectedTab
     var viewModel = HomeViewModel()
     
     var body: some View {
@@ -98,7 +98,7 @@ struct RepoCell: View {
         }
         .frame(width: 156, height: 118)
         .onTapGesture {
-            selectedTab = viewModel.constantViewModel.repoTag
+            selectedTab = .repo
         }
         
     }

@@ -11,7 +11,10 @@ struct ConstantModel {
     var home = "Home"
     var users = "Users"
     var repositories = "Repositories"
-    
-    var usersTag = "users"
-    var repoTag = "repo"
+}
+
+enum SelectedTab: String {
+    case home
+    case repo
+    case users
 }
