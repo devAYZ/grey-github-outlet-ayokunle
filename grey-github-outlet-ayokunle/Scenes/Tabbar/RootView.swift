@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  TabbarRootView.swift
 //  grey-github-outlet-ayokunle
 //
 //  Created by Ayokunle Pro on 2/20/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RootView: View {
+struct TabbarRootView: View {
     
     @State private var selectedTab = "home"
     @State private var repoInfo = ""
@@ -51,7 +51,7 @@ struct RootView: View {
              }
         }
     }
-    
+     /*
     Manrope
     == Manrope-Regular
     == Manrope-ExtraLight
@@ -61,11 +61,12 @@ struct RootView: View {
     == Manrope-Bold
     == Manrope-ExtraBold
      */
+    */
 
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TabbarRootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView()
+        TabbarRootView()
     }
 }

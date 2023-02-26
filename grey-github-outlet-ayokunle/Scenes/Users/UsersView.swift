@@ -7,17 +7,19 @@
 
 import Foundation
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct UsersView: View {
     
     @Binding var userSearchInput: String
-    @State var hideTableView = true
+    @State var hideTableView = false
     static let beginSearchUserText = "Search Github for users..."
     static let emptySearchUserText = "We’ve searched the ends of the earth and we’ve not found this user, please try again"
     @State var searchUserText = beginSearchUserText
     
     @ObservedObject var usersVM = UsersViewModel()
     @State private var showSearchInputAlert = false
+    @State private var searchInputAlertText = ""
     
     var body: some View {
         NavigationView {
@@ -59,7 +61,7 @@ struct UsersView: View {
 
                         }
                         
-                        tableView
+                        listView
                             .opacity(hideTableView ? 0 : 1)
                     }
                     .frame(minWidth: 0,
@@ -80,7 +82,7 @@ struct UsersView: View {
         }
         .accentColor(Color(.label)) // Navigation back color
         .alert(isPresented: $showSearchInputAlert) {
-            Alert(title: Text(""), message: Text("Search field cannot be empty"))
+            Alert(title: Text(""), message: Text(searchInputAlertText))
         }
 
     }
@@ -109,18 +111,21 @@ struct UsersView: View {
         .background(Color.white)
     }
     
-    var tableView: some View {
-        List {
-            ForEach(usersVM.usersList) { user in
-                Text(user.login ?? "")
-            }
-            .modifier(ManropeFont(fName: .medium, size: 13))
+    var listView: some View {
+//        List {
+//            ForEach(usersVM.usersList) { user in
+//                //Text(user.login ?? "")
+//                UsersListCell(userInfo: user)
+//            }
+//        }
+        List(usersVM.usersList, id: \.id) { user in
+            UsersListCell(userInfo: user)
         }
     }
     
     func handleSearchButtonClicked() {
         guard !userSearchInput.isEmpty else {
-            showSearchInputAlert = true
+            handleShowAlert(message: "Search field cannot be empty")
             return
         }
         
@@ -141,9 +146,73 @@ struct UsersView: View {
                     usersVM.usersList = usersItems
                     hideTableView = false
                 case .failure(let error):
-                    print(error.errorDescription ?? "")
+                    handleShowAlert(message: error.errorDescription ?? "")
                 }
             }
         }
+    }
+    
+    func handleShowAlert(message: String) {
+        searchInputAlertText = message
+        showSearchInputAlert = true
+    }
+}
+
+// MARK: Users List Cell
+struct UsersListCell: View {
+    
+    var userInfo: Item
+    
+    var body: some View {
+        //
+        HStack(alignment: .top) {
+//            Image("userImage") // Image
+//                .resizable()
+//                .scaledToFit()
+//                .frame(height: 20)
+//                .cornerRadius(10)
+            AnimatedImage(url: URL(string: userInfo.avatarURL ?? "")) // URL image
+                //.placeholder(UIImage(named: "userImage"))
+                .placeholder {
+                    Circle().foregroundColor(.gray)
+                }
+                .transition(.fade)
+                .resizable()
+                .scaledToFit()
+                .frame(height: 26)
+                .cornerRadius(13)
+            //
+            VStack(alignment: .leading, spacing: 5) {
+                VStack(alignment: .leading) {
+                    Text(userInfo.login?.capitalized ?? "") // Name
+                        .foregroundColor(Color("dullGreen"))
+                        .lineLimit(1)
+                        .modifier(ManropeFont(fName: .semibold, size: 12))
+                    Text(userInfo.login ?? "") // login
+                        .lineLimit(1)
+                        .modifier(ManropeFont(fName: .regular, size: 10))
+                }
+                Text(userInfo.description ?? "No description") // Desc
+                    .lineLimit(2)
+                    .modifier(ManropeFont(fName: .regular, size: 10))
+               //
+                HStack {
+                    Text("Lacation...")  // Locattion
+                        .lineLimit(1)
+                        .modifier(ManropeFont(fName: .regular, size: 8))
+                    Text("Email...") // Email
+                        .lineLimit(1)
+                        .modifier(ManropeFont(fName: .regular, size: 8))
+                }
+                .foregroundColor(.secondary)
+            }
+            
+        }
+    }
+}
+
+struct UsersView_Previews: PreviewProvider {
+    static var previews: some View {
+        UsersView(userSearchInput: UsersViewModel.shared.$testString)
     }
 }

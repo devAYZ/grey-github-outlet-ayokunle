@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 class UsersViewModel: ObservableObject {
     
+    static let shared = UsersViewModel()
     @Published var usersList = [Item]()
+    @State var testString = "ayo"
     
     func searchUsers(searchText: String, completion: @escaping (NetworkResponseType<RepositoriesResponse>) -> Void) {
         NetworkCall.shared.makeAPICall(with: getUserRequestObject(searchText: searchText)) { response in

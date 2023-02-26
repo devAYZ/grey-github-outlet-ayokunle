@@ -46,6 +46,7 @@ struct Item: Identifiable, Codable {
     var receivedEventsURL: String?
     var type: String?
     var siteAdmin: Bool?
+    var topics: [String?]?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -132,6 +133,7 @@ struct Item: Identifiable, Codable {
         case receivedEventsURL = "received_events_url"
         case type
         case siteAdmin = "site_admin"
+        case topics
     }
 }
 

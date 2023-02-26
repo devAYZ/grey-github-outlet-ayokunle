@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct RepositoriesView: View {
     
@@ -18,6 +19,7 @@ struct RepositoriesView: View {
     
     @ObservedObject var repositoriesVM = RepositoriesViewModel()
     @State private var showSearchInputAlert = false
+    @State private var searchInputAlertText = ""
     
     var body: some View {
         NavigationView {
@@ -55,7 +57,7 @@ struct RepositoriesView: View {
                             
                         }
                         
-                        tableView
+                        listView
                             .opacity(hideTableView ? 0 : 1)
                     }
                     .frame(minWidth: 0,
@@ -73,7 +75,7 @@ struct RepositoriesView: View {
                 }
             }
             .alert(isPresented: $showSearchInputAlert) {
-                Alert(title: Text(""), message: Text("Search field cannot be empty"))
+                Alert(title: Text(""), message: Text(searchInputAlertText))
             }
         }
     }
@@ -102,18 +104,15 @@ struct RepositoriesView: View {
         .cornerRadius(3)
     }
     
-    var tableView: some View {
-        List {
-            ForEach(repositoriesVM.repoList) { repo in
-                Text(repo.fullName ?? "")
-            }
-            .modifier(ManropeFont(fName: .medium, size: 13))
+    var listView: some View {
+        List(repositoriesVM.repoList, id: \.id) { repo in
+            RepoListCell(repoInfo: repo)
         }
     }
     
     func handleSearchButtonClicked() {
         guard !repoSearchInput.isEmpty else {
-            showSearchInputAlert = true
+            handleShowAlert(message: "Search field cannot be empty")
             return
         }
         
@@ -133,9 +132,88 @@ struct RepositoriesView: View {
                     repositoriesVM.repoList = repoItems
                     hideTableView = false
                 case .failure(let error):
-                    print(error.errorDescription ?? "")
+                    handleShowAlert(message: error.errorDescription ?? "")
                 }
             }
+        }
+    }
+    
+    func handleShowAlert(message: String) {
+        searchInputAlertText = message
+        showSearchInputAlert = true
+    }
+    
+}
+
+// MARK: Users List Cell
+struct RepoListCell: View {
+    
+    var repoInfo: Item
+    
+    var body: some View {
+        //
+        VStack(alignment: .leading, spacing: 10) {
+            
+            HStack() {
+                
+                AnimatedImage(url: URL(string: repoInfo.owner?.avatarURL ?? "")) // URL image
+                    .placeholder {
+                        Circle().foregroundColor(.gray)
+                    }
+                    .transition(.fade)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 30)
+                    .cornerRadius(15)
+                HStack(spacing: 0.5) {
+                    let fullName = repoInfo.fullName ?? ""
+                    let fullNameSplit = fullName.components(separatedBy: "/")
+                    Text((fullNameSplit.first ?? "") + "/") // Name, ink color
+                        .foregroundColor(Color("inkColor"))
+                        .lineLimit(1)
+                        .modifier(ManropeFont(fName: .regular, size: 12))
+                    Text(fullNameSplit.last ?? "") // Name, black color
+                        .lineLimit(1)
+                        .modifier(ManropeFont(fName: .semibold, size: 12))
+                }
+                Spacer()
+                HStack() {
+                    
+                    HStack(spacing: 3) {
+                        Image("star")
+                            .scaledToFit()
+                            .frame(height: 12)
+                        Text("\(repoInfo.stargazersCount ?? 0)") // Star
+                            .lineLimit(1)
+                            .modifier(ManropeFont(fName: .regular, size: 10))
+                    }
+                    HStack(spacing: 3) {
+                        Circle()
+                            .fill(Color("lightGreen"))
+                            .scaledToFit()
+                            .frame(height: 12)
+                        Text(repoInfo.language ?? "-") // Language
+                            .lineLimit(1)
+                            .modifier(ManropeFont(fName: .regular, size: 10))
+                    }
+                }
+            }
+            
+            Text(repoInfo.description ?? "No description") // Desc
+                .lineLimit(2)
+                .modifier(ManropeFont(fName: .regular, size: 12))
+            
+            HStack {
+                ForEach(repoInfo.topics?.prefix(4) ?? [""]) { topic in
+                    Text(topic ?? "")
+                        .padding(8.0)
+                        .background(Color("cyan2Bg"))
+                        .foregroundColor(Color("cyan2Text"))
+                        .cornerRadius(6)
+                        .lineLimit(1)
+                }
+            }
+            .modifier(ManropeFont(fName: .semibold, size: 10))
         }
     }
     
