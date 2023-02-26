@@ -119,7 +119,9 @@ struct UsersView: View {
 //            }
 //        }
         List(usersVM.usersList, id: \.id) { user in
-            UsersListCell(userInfo: user)
+            NavigationLink(destination: UserDetailView(userDetail: user)) {
+                UsersListCell(userInfo: user)
+            }
         }
     }
     
@@ -177,7 +179,7 @@ struct UsersListCell: View {
                     Circle().foregroundColor(.gray)
                 }
                 .transition(.fade)
-                .resizable()
+                .resizable() // Its keep the aspect ratio
                 .scaledToFit()
                 .frame(height: 26)
                 .cornerRadius(13)
@@ -197,10 +199,10 @@ struct UsersListCell: View {
                     .modifier(ManropeFont(fName: .regular, size: 10))
                //
                 HStack {
-                    Text("Lacation...")  // Locattion
+                    Text("Lacation..")  // Locattion
                         .lineLimit(1)
                         .modifier(ManropeFont(fName: .regular, size: 8))
-                    Text("Email...") // Email
+                    Text("email@email..") // Email
                         .lineLimit(1)
                         .modifier(ManropeFont(fName: .regular, size: 8))
                 }

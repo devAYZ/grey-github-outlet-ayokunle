@@ -13,4 +13,6 @@ enum Endpoints: String {
     
     case searchRepos = "/search/repositories"
     case searchUsers = "/search/users"
+    case getUser = "/users/{userLogin}"
+    case getUserRepo = "/users/{userLogin}/repos"
 }
