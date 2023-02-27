@@ -17,7 +17,7 @@ struct RepositoriesView: View {
     static let emptySearchRepoText = "We’ve searched the ends of the earth, repository not found, please try again"
     @State var searchRepoText = beginSearchRepoText
     
-    @ObservedObject var repositoriesVM = RepositoriesViewModel()
+    @ObservedObject var repositoriesVM = RepositoriesViewModel.shared
     @State private var showSearchInputAlert = false
     @State private var searchInputAlertText = ""
     
@@ -106,7 +106,31 @@ struct RepositoriesView: View {
     
     var listView: some View {
         List(repositoriesVM.repoList, id: \.id) { repo in
-            RepoListCell(repoInfo: repo)
+            NavigationLink {
+                VStack(spacing: 8) {
+                    HStack(alignment: .center) {
+                        AnimatedImage(url: URL(string: repo.owner?.avatarURL ?? "")) // URL image
+                            .placeholder {
+                                Circle().foregroundColor(.gray)
+                            }
+                            .transition(.fade)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 30)
+                            .cornerRadius(15)
+                        Text(repo.fullName ?? "")
+                            .multilineTextAlignment(.center)
+                            .modifier(ManropeFont(fName: .regular, size: 12))
+                            .foregroundColor(.secondary)
+                    }
+                    Text("View is under-development...")
+                        .multilineTextAlignment(.center)
+                        .modifier(ManropeFont(fName: .semibold, size: 14))
+                }
+                .padding()
+            } label: {
+                RepoListCell(repoInfo: repo)
+            }
         }
     }
     
@@ -129,7 +153,8 @@ struct RepositoriesView: View {
                         searchRepoText = RepositoriesView.emptySearchRepoText
                         return
                     }
-                    repositoriesVM.repoList = repoItems
+                    //repositoriesVM.repoList = repoItems
+                    RepositoriesViewModel.shared.repoList = repoItems
                     hideTableView = false
                 case .failure(let error):
                     handleShowAlert(message: error.errorDescription ?? "")

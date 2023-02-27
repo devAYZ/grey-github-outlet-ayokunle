@@ -17,7 +17,7 @@ struct UsersView: View {
     static let emptySearchUserText = "We’ve searched the ends of the earth and we’ve not found this user, please try again"
     @State var searchUserText = beginSearchUserText
     
-    @ObservedObject var usersVM = UsersViewModel()
+    @ObservedObject var usersVM = UsersViewModel.shared
     @State private var showSearchInputAlert = false
     @State private var searchInputAlertText = ""
     
@@ -145,7 +145,8 @@ struct UsersView: View {
                         searchUserText = UsersView.emptySearchUserText
                         return
                     }
-                    usersVM.usersList = usersItems
+                    //usersVM.usersList = usersItems
+                    UsersViewModel.shared.usersList = usersItems
                     hideTableView = false
                 case .failure(let error):
                     handleShowAlert(message: error.errorDescription ?? "")

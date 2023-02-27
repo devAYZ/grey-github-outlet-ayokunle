@@ -9,6 +9,7 @@ import Foundation
 
 class RepositoriesViewModel: ObservableObject {
     
+    static let shared = RepositoriesViewModel()
     @Published var repoList = [Item]()
     
     func searchRepo(searchText: String, completion: @escaping (NetworkResponseType<RepositoriesResponse>) -> Void) {
